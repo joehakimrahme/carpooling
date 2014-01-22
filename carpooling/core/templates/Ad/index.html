@@ -11,7 +11,7 @@
 {% if latest_ad_list %}
   <ul>
   {% for ad in latest_ad_list %}
-    <li><a href="/carpooling/{{ ad.id }}/">{{ ad }}</a></li>
+    <li><a href="{% url 'show' ad.id %}">{{ ad }}</a></li>
   {% endfor %}
 {% else %}
     <p>No recent ads to show</p>
